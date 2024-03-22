@@ -1,12 +1,10 @@
 import { useState } from "react";
 import {
   KeyboardAvoidingView,
-  Pressable,
   SafeAreaView,
   StyleSheet,
   View
 } from "react-native";
-import { Text } from "react-native-paper";
 import { Button, TextInput } from "react-native-paper";
 
 import Header from "~/components/Header";
@@ -20,7 +18,7 @@ export default function Login() {
     <>
       <SafeAreaView style={styles.notch} />
       <View style={styles.container}>
-        <Header title="Spacecraft" />
+        <Header title="Smash Bros" />
         <KeyboardAvoidingView style={styles.form}>
           <TextInput
             mode="outlined"
@@ -39,14 +37,6 @@ export default function Login() {
             }
           />
           <Button onPress={() => toggleIsSignedIn()} mode="contained">Connexion</Button>
-          <Pressable>
-            <Text
-              variant="bodySmall"
-              style={styles.baseline}
-            >
-              Read Terms and conditions
-            </Text>
-          </Pressable>
         </KeyboardAvoidingView>
       </View>
       <SafeAreaView />
@@ -55,11 +45,6 @@ export default function Login() {
 }
 
 const styles = StyleSheet.create({
-  baseline: {
-    color: "rgba(0, 0, 0, 0.5)",
-    textAlign: "center",
-    textDecorationLine: "underline"
-  },
   container: {
     backgroundColor: "white",
     flex: 1

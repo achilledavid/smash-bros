@@ -5,9 +5,9 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Routes from "./Route";
 
 import CustomNavigationBar from "~/navigation/CustomNavigationBar";
-import StarshipFeed from "~/screens/StarshipFeed";
+import Characters from "~/screens/Characters";
 import Terms from "~/screens/Terms";
-import StarshipDetails from "~/screens/StarshipDetails";
+import CharacterDetails from "~/screens/CharacterDetails";
 
 const Stack = createNativeStackNavigator();
 
@@ -18,20 +18,20 @@ const RootNavigator = () => {
         screenOptions={{
           header: (props) => <CustomNavigationBar {...props} />
         }}
-        initialRouteName={Routes.STARSHIP_FEED_SCREEN}
+        initialRouteName={Routes.CHARACTERS_SCREEN}
       >
         <Stack.Group>
           <Stack.Screen
-            name={Routes.STARSHIP_FEED_SCREEN}
-            component={StarshipFeed}
+            name={Routes.CHARACTERS_SCREEN}
+            component={Characters}
           />
           <Stack.Screen
             name={Routes.TERMS_SCREEN}
             component={Terms}
           />
           <Stack.Screen
-            name={Routes.STARSHIP_DETAILS_SCREEN}
-            component={StarshipDetails}
+            name={Routes.CHARACTER_DETAILS_SCREEN}
+            component={CharacterDetails}
             options={{
               presentation: "modal",
             }}

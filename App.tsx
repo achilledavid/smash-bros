@@ -1,7 +1,6 @@
 import { NetworkProvider } from "react-native-offline";
 import { Provider as PaperProvider } from "react-native-paper";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-
 import Navigator from "~/navigation/Navigator";
 import { AuthContextProvider } from "~/contexts/AuthContext";
 

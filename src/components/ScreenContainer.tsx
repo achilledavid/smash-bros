@@ -7,7 +7,7 @@ import { Text } from "react-native-paper";
 import { Offline } from "~/components/Offline";
 
 interface ScreenContainerProps {
-  title: string;
+  title?: string;
   children?: ReactNode;
   withSeparatorFooter?: boolean;
 }
@@ -21,7 +21,6 @@ export const ScreenContainer = ({ title, children }: ScreenContainerProps) => {
       flex: 1,
       gap: 32,
       marginTop: !isConnected || isConnected === null ? 69 : 0,
-      paddingHorizontal: 32
     }
   });
 
@@ -30,12 +29,7 @@ export const ScreenContainer = ({ title, children }: ScreenContainerProps) => {
       <Offline />
       <ScrollView nestedScrollEnabled={true}>
         <View style={styles.container}>
-          <Text
-            variant="headlineMedium"
-            style={{ fontWeight: "bold" }}
-          >
-            {title}
-          </Text>
+          {title && <Text variant="headlineMedium" style={{ fontWeight: "bold" }}>{title}</Text>}
           {children}
         </View>
       </ScrollView>
