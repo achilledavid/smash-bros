@@ -6,3 +6,4 @@ liste de tous les personnages avec informations données par l'api
 récupération dynamique des images
 ajout d'un personnage a sa liste de favoris
 bouton pour afficher un personnage aléatoirement
+https://github.com/achilledavid/smash-bros/blob/main/assets/qrcode.png
